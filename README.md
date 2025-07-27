@@ -4,7 +4,7 @@ Ce template fournit une structure de base pour les projets Java avec Maven, conf
 
 ## Prérequis
 
-- Java JDK 21 ou supérieur
+- Java JDK 20 ou supérieur
 - Maven 3.8.0 ou supérieur
 
 ## Structure du projet
