@@ -1,20 +1,27 @@
-# java-starter
+# Java Starter Template
 
-Ce projet est un template de base pour les projets Java utilisant Maven.
+Ce template fournit une structure de base pour les projets Java avec Maven, configuré pour Java 21.
 
 ## Prérequis
 
-- Java JDK 8 ou supérieur
-- Maven 3.6.0 ou supérieur
+- Java JDK 21 ou supérieur
+- Maven 3.8.0 ou supérieur
 
 ## Structure du projet
 
 ```
 java-starter/
 ├── src/
-│   └── main/
+│   ├── main/
+│   │   ├── java/
+│   │   │   └── fr/guardia/
+│   │   │       └── App.java
+│   │   └── resources/
+│   │       └── application.properties
+│   └── test/
 │       └── java/
-│           └── App.java
+│           └── fr/guardia/
+│               └── AppTest.java
 ├── pom.xml
 └── .gitignore
 ```
@@ -39,13 +46,24 @@ Pour exécuter l'application :
 mvn exec:java
 ```
 
-## Structure du code
+Pour exécuter les tests :
+```bash
+mvn test
+```
 
-- `src/main/java/` : Contient le code source principal
-- `pom.xml` : Fichier de configuration Maven
-- `.gitignore` : Fichier de configuration Git pour ignorer les fichiers inutiles
+## Configuration
+
+La configuration de base est dans `src/main/resources/application.properties`. Vous pouvez :
+- Modifier le nom de l'application
+- Ajuster les niveaux de logging
+- Ajouter vos propres configurations
 
 ## Développement
+
+Les dépendances principales sont déjà configurées dans le `pom.xml` :
+- JUnit 5 pour les tests
+- Lombok pour la réduction du boilerplate code
+- SLF4J pour le logging
 
 Pour ajouter de nouvelles dépendances, modifiez le fichier `pom.xml`.
 
